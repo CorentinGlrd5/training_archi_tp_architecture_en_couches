@@ -1,0 +1,23 @@
+<h1>Products list :</h1>
+
+<table border="1">
+    <tr>
+       <th><a href="/product/list?sort=_id">Id</a></th>
+       <th><a href="/product/list?sort=name">Name</a></th>
+       <th><a href="/product/list?sort=description">Description</a></th>
+       <th><a href="/product/list?sort=creation_date">Creation date</a></th>
+       <th><a href="/product/list?sort=price">Price</a></th>
+       <th>Create a new product</th>
+    </tr>
+ 
+    <% for (var p of products) { %>
+     <tr>
+       <td><%= p._id %></td>
+       <td><%= p.name %></td>
+       <td><%= p.description %></td>
+       <td><%= p.creation_date %></td>
+       <td><%= p.price %></td>
+       <td><a href="/product/create">Create</a></td>
+     </tr>    
+    <% } %>
+ </table>
